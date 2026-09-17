@@ -1,0 +1,16 @@
+---
+- name: First Ansible Playbook
+  hosts: linuxservers
+
+  tasks:
+
+    - name: Ping all manage nodes
+      ping:
+
+    - name: Display Hello World
+      debug: 
+        msg: "Hello world from {{ inventory_hostname }}"
+
+    - name: Display Operating System
+      debug:
+        msg: "Operating System: {{ os_type }}" 
